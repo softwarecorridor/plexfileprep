@@ -1,0 +1,16 @@
+.mkv
+.vob
+.ogv
+.ogg
+.avi
+.mov
+.wmv
+.mp4
+.m4p
+.m4v
+.mpg
+.mp2
+.mpeg
+.mpe
+.mpv
+.m2v
