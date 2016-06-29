@@ -11,6 +11,7 @@ class Show:
     original = ""
     version = 1
     season = None
+    mark_delete = False
 
     def __init__(self, path, filename, file_extension, group = None, episode_number = None, encoding = None, season = None, version = 1 ):
 
@@ -59,5 +60,4 @@ def validate(string):
     if t:
         return False
 
-    #TODO: check ends in an extension
     return True

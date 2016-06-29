@@ -62,11 +62,10 @@ def get_extension(string):
     extension = string[index:]
     return extension
 
-#TODO: handle v2 better
 
 def get_show_name_and_episode(string):
     name_array = string.split('-')
-    #TODO: deal with v2 in better way
+
     possible_episode_num = name_array[-1]
     non_version = possible_episode_num.split("v")[0]
 
@@ -105,8 +104,10 @@ def get_prepared_string(string):
 def get_version(string):
     #regex
     match = re.search("(?<=v)\d*", string)
-    if match:
+    if match.group(0):
         return match.group(0)
+    else:
+        return '1'
 
 def parse(string, season = None):
 
@@ -138,9 +139,9 @@ def parse(string, season = None):
 
 
     
-#test = "[ILA]_Aim_for_the_Ace!_-_05.avi"
+# test = "[ILA]_Aim_for_the_Ace!_-_05.avi"
 # test = "Senki zesshou symphyogear.mkv"
-# test = "Senki zesshou symphyogear - v2[BD 720p AAC]  [EB80A8D7].mkv"
+# test = "Senki zesshou symphyogear - [v2][BD 720p AAC]  [EB80A8D7].mkv"
 # #
 # s = parse(test)
 #
